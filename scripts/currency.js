@@ -26,8 +26,8 @@
       };
 
 
-$scope.filterValue = function($event){
-        if(isNaN(String.fromCharCode($event.keyCode))&&(String.fromCharCode($event.keyCode)!='.')){
+    $scope.filterValue = function($event){
+        if(isNaN(String.fromCharCode($event.keyCode)) && (String.fromCharCode($event.keyCode) != '.')){
             $event.preventDefault();
         }
 	 var flag = $scope.fromValue.replace(/[^0-9\.]+/g, '');
@@ -36,13 +36,12 @@ $scope.filterValue = function($event){
                     if (flag.length > (flag.indexOf('.') + 2)) {
                         $event.preventDefault();
                     }
-			if((String.fromCharCode($event.keyCode) =='.'))
-				{
-				$event.preventDefault();
-					}
+		    if((String.fromCharCode($event.keyCode) == '.')){
+		         $event.preventDefault();
+		    }
 	
 		}
 	
-};
+       };
 
  }]);
