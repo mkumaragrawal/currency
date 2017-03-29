@@ -30,10 +30,8 @@
         if(isNaN(String.fromCharCode($event.keyCode)) && (String.fromCharCode($event.keyCode) != '.')){
             $event.preventDefault();
         }
-	 var flag = $scope.fromValue.replace(/[^0-9\.]+/g, '');
-
-                if (flag.indexOf('.') != -1) {
-                    if (flag.length > (flag.indexOf('.') + 2)) {
+                if ($scope.fromValue.indexOf('.') != -1) {
+                    if ($scope.fromValue.length > ($scope.fromValue.indexOf('.') + 2)) {
                         $event.preventDefault();
                     }
 		    if((String.fromCharCode($event.keyCode) == '.')){
